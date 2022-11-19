@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Pressable } from "react-native";
 import React from "react";
 import { ITask } from "../../Screen/Home";
 import { styles } from "./style";
@@ -39,9 +39,15 @@ export default function Cards({
       >
         {texto}
       </Text>
-      <TouchableOpacity onPress={() => handleRemove(id)}>
-        <Feather name="trash-2" size={24} color="#808080" />
-      </TouchableOpacity>
+      <Pressable onPress={() => handleRemove(id)}>
+        {({ pressed }) => (
+          <Feather
+            name="trash-2"
+            size={24}
+            color={pressed ? "red" : "#808080"}
+          />
+        )}
+      </Pressable>
     </View>
   );
 }

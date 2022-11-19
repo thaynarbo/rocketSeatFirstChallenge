@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    marginRight: 8,
   },
   taskDescription: {
     fontWeight: "700",
