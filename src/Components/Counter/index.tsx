@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { styles } from "./style";
 
 interface ICounterProps {
   text: string;
@@ -12,26 +13,10 @@ export default function Counter({
   fontColor = "#4EA8DE",
 }: ICounterProps) {
   return (
-    <View style={{ flexDirection: "row" }}>
-      <Text style={{ fontWeight: "700", color: fontColor, marginRight: 8 }}>
-        {text}
-      </Text>
-      <View
-        style={{
-          backgroundColor: "#333333",
-          borderRadius: 10,
-          paddingHorizontal: 8,
-          paddingVertical: 2,
-        }}
-      >
-        <Text
-          style={{
-            color: "#FAFAFA",
-            fontWeight: "700",
-          }}
-        >
-          {number}
-        </Text>
+    <View style={styles.container}>
+      <Text style={[styles.container, { color: fontColor }]}>{text}</Text>
+      <View style={styles.counterContainer}>
+        <Text style={styles.counterText}>{number}</Text>
       </View>
     </View>
   );

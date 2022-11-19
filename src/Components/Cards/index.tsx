@@ -29,12 +29,13 @@ export default function Cards({
         )}
       </TouchableOpacity>
       <Text
-        style={{
-          color: done ? "#808080" : "#FAFAFA",
-          paddingHorizontal: 8,
-          flex: 1,
-          textDecorationLine: done ? "line-through" : "none",
-        }}
+        style={[
+          styles.cardText,
+          {
+            color: done ? "#808080" : "#FAFAFA",
+            textDecorationLine: done ? "line-through" : "none",
+          },
+        ]}
       >
         {texto}
       </Text>

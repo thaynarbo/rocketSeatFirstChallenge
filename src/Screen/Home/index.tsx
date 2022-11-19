@@ -73,7 +73,7 @@ export default function Home() {
         </View>
         <FlatList
           data={tasks}
-          contentContainerStyle={{ marginTop: 20 }}
+          contentContainerStyle={styles.listContainer}
           renderItem={({ item }) => (
             <Cards
               key={item.id}

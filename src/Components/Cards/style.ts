@@ -14,4 +14,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 8,
   },
+  cardText: {
+    paddingHorizontal: 8,
+    flex: 1,
+  },
 });
